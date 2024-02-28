@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>Salary Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Salary Calculator</h1>
-  </header>
-  <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
-  </main>
-  <footer>
-    <p>Total Monthly</p>
-  </footer>
+    <h1>Employee Salary Calculator</h1>
+
+    <form id="employee-form">
+        <label for="firstNameInput">First Name:</label>
+        <input type="text" id="firstNameInput" data-testid="firstNameInput" required>
+
+        <label for="lastNameInput">Last Name:</label>
+        <input type="text" id="lastNameInput" data-testid="lastNameInput" required>
+
+        <label for="idInput">ID Number:</label>
+        <input type="text" id="idInput" data-testid="idInput" required>
+
+        <label for="titleInput">Job Title:</label>
+        <input type="text" id="titleInput" data-testid="titleInput" required>
+
+        <label for="annualSalaryInput">Annual Salary ($):</label>
+        <input type="number" id="annualSalaryInput" data-testid="annualSalaryInput" required>
+
+        <button type="submit" data-testid="submitButton">Submit</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID Number</th>
+                <th>Job Title</th>
+                <th>Annual Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="employee-table-body">
+          <tr>
+            <td>Yahye</td>
+            <td>Mohamud</td>
+            <td>1233536</td>
+            <td>Engineer</td>
+            <td>$50,000</td>
+            <td><button class="delete-button">Delete</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <footer id="footer">
+        Total Monthly Cost: <span id="totalMonthlyCost"></span>
+    </footer>
+
+    <script src="base.js"></script>
 </body>
 </html>
